@@ -1,0 +1,19 @@
+package co.viktor.selenium.demo;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Wikipedia {
+	public static void main(String[] args) throws InterruptedException {
+	System.setProperty("webdriver.chrome.driver", "D:\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.get("http://www.wikipedia.org/");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("searchInput")).sendKeys("oldest man");
+	Thread.sleep(1000);
+	driver.findElement(By.id("searchInput")).sendKeys(Keys.ENTER);
+	String at = driver.getTitle();
+	String et = "wikipedia";
+	//driver.close();
+	}
+}
