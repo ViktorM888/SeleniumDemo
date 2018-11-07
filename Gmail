@@ -11,7 +11,7 @@ public class Demo {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.gmail.com/");
 		driver.manage().window().maximize();
-		driver.findElement(By.id("identifierId")).sendKeys("sid.aka.beacon@gmail.com");
+		driver.findElement(By.id("identifierId")).sendKeys("testingseleniumforthefirsttime@gmail.com");
 		Thread.sleep(1000);
 		driver.findElement(By.className("wpW1cb")).click();
 		String at = driver.getTitle();
